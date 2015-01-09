@@ -1,13 +1,13 @@
 class String
   define_method(:word_frequency) do |other_words|
-    something = other_words.downcase()
-    words = self.downcase().split()
+    answer_array = Array.new()
     counts = Hash.new(0)
+    words = self.downcase().split()
     words.each() do |word|
-      counts[word] += 1
-      counts.fetch("and")
-
+      counts[word] += (1)
+      answer_array = counts.fetch(word)
     end
+    answer_array
   end
 end
 
