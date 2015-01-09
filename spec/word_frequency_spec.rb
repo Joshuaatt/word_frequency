@@ -3,8 +3,12 @@ require('word_frequency')
 
 describe('String#word_frequency') do
 
-  it("takes the input of 'a' and returns 1") do
-    expect("and".word_frequency("and")).to(eq(1))
+  it("takes a one letter input and returns 1") do
+    expect("a".word_frequency("a")).to(eq(1))
+  end
+
+  it("takes a two word input and returns 2") do
+    expect("two words".word_frequency("two words")).to(eq(2))
   end
 
 
