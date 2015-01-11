@@ -8,9 +8,7 @@ get('/') do
   erb(:form)
 end
 
-get('/result') do
-    @input1 = params.fetch("word_counter")
-
-    @result = @input1.word_frequency()
-    erb(:result)
+get('/results') do
+    @word_counter = params.fetch("word_counter").word_frequency(params.fetch('word_to_count'))
+    erb(:results)
 end
