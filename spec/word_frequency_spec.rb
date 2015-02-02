@@ -12,36 +12,6 @@ describe('String#word_frequency') do
   end
 
   it("takes a multi word input, one word to compare, and returns the number of times the word is present") do
-    expect("Some say the world will end in fire,
-            Some say in ice.
-            From what I’ve tasted of desire
-            I hold with those who favor fire.
-            But if it had to perish twice,
-            I think I know enough of hate
-            To say that for destruction ice
-            Is also great
-            And would suffice.".word_frequency("say")).to(eq(3))
+    expect("word word word words word words.".word_frequency("words")).to(eq(2))
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#Create a website that uses a method to return how frequently a word appears in a given string.
